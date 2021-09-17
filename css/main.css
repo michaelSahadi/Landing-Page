@@ -18,7 +18,7 @@ a {
 }
 
 h1 {
-  line-height: 3.125rem;
+  line-height: 2.5rem;
 }
 
 p {
@@ -68,7 +68,61 @@ p {
   padding-left: 20px;
 }
 
-.about-content-2 {
+.heading {
+  margin: 0 20px 0;
+}
+
+.about-content-2,
+.experience-card-2 {
   margin-top: 20px;
   padding: 20px;
 }
+
+.contact {
+  margin: 80px 0px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tl {
+  visibility: hidden;
+}
+
+#service {
+  display: flex;
+  flex-direction: column;
+}
+
+.services-card-img {
+  margin: 0 40px 20px;
+  width: 305px;
+  border-radius: 15px;
+}
+
+.services-card-holder {
+  margin: 0 40px 80px;
+  width: 305px;
+  height: 66px;
+  border-radius: 15px;
+  /* background-image: linear-gradient(to right, #5b5b5b 60%, #5b5b5b 80%); */
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(165, 165, 165, 20%);
+  box-shadow: 15px 15px 50px rgb(0 0 0 / 0.4);
+  backdrop-filter: blur(20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sevices-sub-card {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+@media (min-width: 62em) {
+  .hamburger {
+    display: none;
+  }
