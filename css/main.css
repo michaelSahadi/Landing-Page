@@ -1,3 +1,5 @@
+@import "nav.css";
+
 * {
   margin: 0;
   padding: 0;
@@ -29,6 +31,13 @@ p {
   padding: 160px 20px;
 }
 
+.cta-img-holder {
+  padding: 10em;
+  background-image: url("../images/splash.jpeg");
+  background-repeat: no-repeat;
+  background-size: 90vw;
+}
+
 .home-cta-1 {
   margin-bottom: 40px;
 }
@@ -47,10 +56,6 @@ p {
   display: inline-block;
   font-weight: bold;
   cursor: pointer;
-}
-
-.cta-image {
-  max-width: 100%;
 }
 
 #about {
@@ -106,7 +111,6 @@ p {
   width: 305px;
   height: 66px;
   border-radius: 15px;
-  /* background-image: linear-gradient(to right, #5b5b5b 60%, #5b5b5b 80%); */
   border-style: solid;
   border-width: 1px;
   border-color: rgb(165, 165, 165, 20%);
@@ -126,3 +130,4 @@ p {
   .hamburger {
     display: none;
   }
+}
