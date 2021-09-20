@@ -26,7 +26,7 @@ nav {
   position: fixed;
   left: -100%;
   margin: 7.5rem 0;
-  padding: 2.5rem 0;
+  padding: 1rem 0;
   flex-direction: column;
   width: 100%;
   border-radius: 15px;
@@ -39,6 +39,10 @@ nav {
 
 .nav-menu.active {
   left: 0;
+}
+
+li {
+  margin-bottom: 1rem;
 }
 
 .hamburger.active .bar:nth-child(2) {

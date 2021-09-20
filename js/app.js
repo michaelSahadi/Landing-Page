@@ -26,4 +26,21 @@ function mobileMenu() {
   navMenu.classList.toggle("active");
 }
 
-const
+// const mainEl = document.querySelector('main');
+
+// console.log(mainEl);
+
+// const sections = mainEl[0].document.querySelector('section');
+
+
+let sections = document.querySelectorAll('section');
+
+// console.log(sections);
+
+for (let i = 0; i < sections.length; i++) {
+  console.log(sections[i].title);
+  let title = sections[i].title
+  let listelement = document.createElement('li');
+  listelement.innerHTML = `<a href="#${sections[i].title}" class="nav-a">${sections[i].title}</a>`;
+  navMenu.appendChild(listelement);
+}

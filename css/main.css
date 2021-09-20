@@ -130,4 +130,35 @@ p {
   .hamburger {
     display: none;
   }
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 194px;
+  }
+
+  nav {
+    margin-bottom: 0rem;
+    /* background-color: #f5efe0; */
+    grid-area: nav;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-menu {
+    all: revert;
+    margin: 2.75rem 7.25rem 0 0;
+    list-style: none;
+    visibility: visible;
+    display: flex;
+  }
+
+  .nav-a {
+    margin-right: 1.25rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1a1a1a;
+  }
 }
