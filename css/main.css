@@ -34,7 +34,7 @@ p {
   line-height: 1.875rem;
 }
 
-#Home {
+#home {
   padding: 0px 20px;
 }
 
@@ -53,19 +53,55 @@ p {
   margin-bottom: 20px;
 }
 .cta-btn {
-  margin-bottom: 40px;
   width: 150px;
   height: 40px;
-  border-radius: 15px;
-  padding-top: 10px;
-  background: linear-gradient(to right, #3eacbd, #016774);
-  text-align: center;
-  display: inline-block;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
   font-weight: bold;
-  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 100rem;
+
+  box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+  /* border: solid 3px transparent; */
+  border-width: 3px;
+  border-style: solid;
+  border-image: linear-gradient(101deg, #3eacbd, #016774) 1;
+  /* background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    linear-gradient(101deg, #3eacbd, #016774); */
+  /* border-color: linear-gradient(101deg, #3eacbd, #016774); */
+  /* background-image: linear-gradient(transparent, transparent); */
+  /* background-origin: border-box;
+  background-clip: content-box, border-box; */
+  /* box-shadow: 2px 1000px 1px rgb(50, 50, 50, 100%) inset; */
+
+  /* border: 2px solid transparent;
+  /* border-right-color: #743ad5; */
+  /* border-color: linear-gradient(101deg, #3eacbd, #016774);
+   background: linear-gradient(
+        to left,
+        rgb(116, 58, 213) 0%,
+        rgb(186, 58, 143) 70%,
+        transparent 70%,
+        transparent 85%,
+        rgb(201, 58, 128) 85%,
+        rgb(213, 58, 157) 100%
+      )
+      top/100% 2px, 
+    linear-gradient(to left, #743ad5 0%, #d53a9d 100%) bottom/100% 2px;
+  background-repeat: no-repeat; */
 }
 
-#About {
+/* .cta-btn:hover {
+  background: linear-gradient(to bottom, #3eacbd 0%, #016774 100%);
+} */
+
+#about {
   display: flex;
   flex-direction: column;
 }
@@ -102,7 +138,7 @@ p {
   visibility: hidden;
 }
 
-#Service {
+#service {
   display: flex;
   flex-direction: column;
 }
@@ -166,7 +202,7 @@ p {
     box-shadow: 0 8px 32px 0 rgba(0 0 0 / 0.4);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    border-radius: 10px 0 0 10px;
+    border-radius: 25px 0 0 25px;
     border: 1px solid rgba(165, 165, 165, 0.2);
     border-right: 0;
     display: flex;
@@ -198,7 +234,7 @@ p {
     color: #ffffff;
   }
 
-  #Home {
+  #home {
     margin-bottom: 40px;
     padding: 0 0;
     background: url("../images/splash.jpeg") no-repeat center center/cover;
@@ -248,7 +284,7 @@ p {
     box-shadow: 0 8px 32px 0 rgba(0 0 0 / 0.4);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 25px 25px 0;
     border: 1px solid rgba(165, 165, 165, 0.2);
     border-left: 0;
     z-index: 2;
@@ -266,20 +302,51 @@ p {
   .cta-btn-splash {
     margin-bottom: 40px;
   }
-  #About {
+  #about {
+    all: revert;
     display: grid;
-    grid-template-areas: "aside content";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.5fr;
+    grid-template-areas:
+      "aside content"
+      "contact contact";
   }
 
   aside {
+    position: relative;
+    height: 100vh;
     grid-area: aside;
+    z-index: -1;
   }
 
+  .back {
+    position: relative;
+    grid-area: content;
+    width: 74.32%;
+    z-index: -1;
+  }
+
+  .tl {
+    visibility: visible;
+    font-size: 16rem;
+    color: #525151;
+    font-weight: bold;
+  }
+
+  #about-background-text-1 {
+    margin: 150px 0 0 10px;
+  }
+
+  #about-background-text-2 {
+    margin: 450px 0 0 0;
+  }
   .about-content {
+    all: revert;
+    right: 0px;
     height: 620px;
     width: 1010px;
-    left: 0px;
-    top: 30%;
+    top: -75vh;
+    /* transform: translate(-100%, -50%); */
     position: relative;
     padding: 40px;
     box-shadow: 0 8px 32px 0 rgba(0 0 0 / 0.4);
@@ -288,9 +355,10 @@ p {
     border-radius: 10px 10px 0 0;
     border: 1px solid rgba(165, 165, 165, 0.2);
     border-right: 0;
-    z-index: 2;
+    z-index: 4;
   }
 
-  /* .about-content-1 {
-  } */
+  .about-contact {
+    grid-area: contact;
+  }
 }

@@ -34,13 +34,13 @@ function mobileMenu() {
 for (let i = 0; i < sections.length; i++) {
   console.log(sections[i].title);
   let title = sections[i].title
-  let lowerTitle = title.toLowerCase();
-  var listelement = document.createElement('li');
-  listelement.innerHTML = `<a href="#${lowerTitle}"  data-page="${lowerTitle}" class="${lowerTitle}">${lowerTitle}</a>`;
-  navMenu.appendChild(listelement);
+  let upperTitle = title.toUpperCase();
+  var listElement = document.createElement('li');
+  listElement.innerHTML = `<a href="#${title}"  data-page="${title}" class="${title}">${upperTitle}</a>`;
+  navMenu.appendChild(listElement);
 }
 
-
+const active = document.querySelector('li');
 const options = {
   threshold: 0.7
 };
@@ -48,12 +48,12 @@ const options = {
 let observer = new IntersectionObserver(navCheck, options);
 
 function navCheck(entries) {
+  // if (!FileSystemEntry.isIntersecting) {
+  //   console.log(active.innerHTML);
+
   entries.forEach(entry => {
     console.log(entry);
-    const className = entry.target.className;
-    console.log(className);
-    const activeAnchor = document.querySelector(`[data-page=${className}]`);
-    console.log(activeAnchor);
+
   });
 }
 
