@@ -138,19 +138,22 @@ p {
   visibility: hidden;
 }
 
-#service {
+#services {
   display: flex;
   flex-direction: column;
+  /* justify-content: center; */
+  align-content: center;
+  background: blue;
 }
 
 .services-card-img {
-  margin: 0 40px 20px;
+  /* margin: 0 40px 20px; */
   width: 305px;
   border-radius: 15px;
 }
 
 .services-card-holder {
-  margin: 0 40px 80px;
+  /* margin: 0 40px 80px; */
   width: 305px;
   height: 66px;
   border-radius: 15px;
@@ -242,7 +245,7 @@ p {
 
   .cta-img-holder {
     all: revert;
-    background: url("../images/splash.jpeg") no-repeat center center/cover;
+    /* background: url("../images/splash.jpeg") no-repeat center center/cover; */
     /* height: 100%; */
     /* position: relative; */
     /* Center and scale the image nicely */
@@ -314,51 +317,65 @@ p {
 
   aside {
     position: relative;
-    height: 100vh;
+    background: url("../images/2.jpeg") no-repeat center center/cover;
+    max-height: 100vh;
+    width: 700px;
     grid-area: aside;
     z-index: -1;
   }
 
   .back {
     position: relative;
+    height: 100vh;
     grid-area: content;
-    width: 74.32%;
-    z-index: -1;
+    z-index: -4;
+    display: flex;
+    flex-direction: column;
+    background: blue;
   }
 
-  .tl {
-    visibility: visible;
-    font-size: 16rem;
-    color: #525151;
-    font-weight: bold;
-  }
-
-  #about-background-text-1 {
-    margin: 150px 0 0 10px;
-  }
-
-  #about-background-text-2 {
-    margin: 450px 0 0 0;
-  }
   .about-content {
     all: revert;
-    right: 0px;
     height: 620px;
     width: 1010px;
-    top: -75vh;
-    /* transform: translate(-100%, -50%); */
+    /* ttop: -75vh; */
     position: relative;
     padding: 40px;
     box-shadow: 0 8px 32px 0 rgba(0 0 0 / 0.4);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    border-radius: 10px 10px 0 0;
+    border-radius: 0 25px 25px 0;
     border: 1px solid rgba(165, 165, 165, 0.2);
-    border-right: 0;
-    z-index: 4;
+    border-left: 0;
+    z-index: 2;
+  }
+
+  .tl {
+    visibility: visible;
+    font-size: 15vw;
+    color: #525151;
+    font-weight: bold;
+    width: 800;
+  }
+
+  #about-background-text-1 {
+    margin-top: 250px;
+    margin-bottom: 500px;
+    padding-left: 80px;
+  }
+
+  #about-background-text-2 {
+    padding-left: 5px;
   }
 
   .about-contact {
     grid-area: contact;
+  }
+
+  #services {
+    all: revert;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
   }
 }
