@@ -32,10 +32,11 @@ h1 {
 
 p {
   line-height: 1.875rem;
+  /* margin-bottom: 1.25rem; */
 }
 
 #home {
-  padding: 0px 20px;
+  padding: 0px 1.25rem;
 }
 
 .cta-img-holder {
@@ -43,6 +44,11 @@ p {
   background-image: url("../images/splash.jpeg");
   background-repeat: no-repeat;
   background-size: 90vw;
+}
+
+.home-cta {
+  display: flex;
+  flex-direction: column;
 }
 
 .home-cta-1 {
@@ -138,17 +144,28 @@ p {
   visibility: hidden;
 }
 
-#services {
+/* #services {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+  justify-content: center;
   align-content: center;
-  background: blue;
+} */
+
+.services-card-img-wrapper {
+  display: flex;
+  justify-content: center;
 }
 
+.sevices-sub-card {
+  margin-top: 1.25rem;
+  margin-bottom: 5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+}
 .services-card-img {
-  /* margin: 0 40px 20px; */
-  width: 305px;
+  width: 19.0625rem;
   border-radius: 15px;
 }
 
@@ -165,11 +182,6 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.sevices-sub-card {
-  font-size: 2rem;
-  font-weight: 700;
 }
 
 @media (min-width: 62em) {
@@ -278,8 +290,8 @@ p {
   }
 
   .home-cta {
-    height: 310px;
-    width: 1089px;
+    height: 19.375rem;
+    width: 68.0625rem;
     left: 0px;
     top: 30%;
     position: relative;
@@ -376,6 +388,122 @@ p {
     all: revert;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 0.25fr 0.5fr;
+    grid-template-areas:
+      "card1 card2 card3"
+      "title1 title2 title3"
+      "space-left contact space-right";
+  }
+
+  .services-card-img-wrapper {
+    margin-top: 10rem;
+  }
+
+  .services-card-img {
+    width: 24.75rem;
+  }
+
+  #c1 {
+    grid-area: card1;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
+  #c2 {
+    grid-area: card2;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
+  #c3 {
+    grid-area: card3;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .sevices-sub-card {
+    margin-bottom: 0px;
+    grid-area: title1;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
+  #t1 {
+    grid-area: title1;
+  }
+
+  #t2 {
+    grid-area: title2;
+  }
+
+  #t3 {
+    grid-area: title3;
+  }
+
+  #services-contact {
+    grid-area: contact;
+    margin-top: -50%;
+  }
+
+  #experience {
+    margin-bottom: 40px;
+    padding: 0 0;
+    background: url("../images/6.jpeg") no-repeat center center/cover;
+    filter: brightness(80%);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+
+  .experience-card {
+    height: 620px;
+    width: 1148px;
+    left: 0px;
+    top: 30%;
+    position: relative;
+    padding: 40px;
+    box-shadow: 0 8px 32px 0 rgba(0 0 0 / 0.4);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 0 25px 25px 0;
+    border: 1px solid rgba(165, 165, 165, 0.2);
+    border-left: 0;
+    z-index: 2;
+  }
+
+  #experience-card-1 {
+    margin-top: 2.5rem;
+  }
+  .experience-card-2 {
+    all: revert;
+    padding-left: 1.25rem;
+    margin: 0 0 1.25rem 0;
+  }
+
+  #support {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 1fr;
+    grid-template-areas: "aside aside text";
+  }
+
+  .support-img {
+    height: 36.4375rem;
+    width: 54.6875rem;
+    margin-top: 13.75rem;
+    background: url("../images/7.jpeg") no-repeat center center/cover;
+    grid-area: aside;
+  }
+
+  .about-content-1 {
+    margin: 13.75rem 5rem 0 0;
+    grid-area: text;
+  }
+
+  #contact-btn {
+    margin-left: 20px;
   }
 }

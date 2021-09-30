@@ -10,9 +10,10 @@ nav {
 }
 
 .hamburger {
+  position: fixed;
   display: block;
   cursor: pointer;
-  margin: 20px 0 40px 0;
+  margin: 20px 0 40px 20px;
 }
 
 .bar {
@@ -45,8 +46,11 @@ nav {
 }
 
 li {
-  /* position: relative; */
   margin: 1.25rem 0 0 1.25rem;
+}
+
+li a:hover {
+  color: #016774;
 }
 
 .nav-a {
