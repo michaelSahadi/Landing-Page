@@ -2,9 +2,9 @@
 
 Udacity Landing Page
 
-![Banner](https://github.com/navendu-pottekkat/awesome-readme/blob/master/header.png)
+<!-- ![Banner](https://github.com/navendu-pottekkat/awesome-readme/blob/master/header.png) -->
 
-# Project Title
+# Udacity Landing Page
 
 <!-- Add buttons here -->
 
