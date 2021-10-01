@@ -19,7 +19,7 @@ for (let i = 0; i < sections.length; i++) {
 }
 
 const options = {
-  threshold: 0.4
+  threshold: 0.2
 };
 
 let observer = new IntersectionObserver(navCheck, options);

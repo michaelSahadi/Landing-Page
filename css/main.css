@@ -36,7 +36,7 @@ p {
 }
 
 .cta-img-holder {
-  padding: 10em;
+  padding: 30em 10em 0 10em;
   background-image: url("../images/splash.jpeg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
