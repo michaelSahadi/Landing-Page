@@ -35,20 +35,20 @@ p {
   /* margin-bottom: 1.25rem; */
 }
 
-#home {
-  padding: 0px 1.25rem;
-}
-
 .cta-img-holder {
   padding: 10em;
   background-image: url("../images/splash.jpeg");
+  background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: 90vw;
 }
 
 .home-cta {
+  padding: 0 10%;
   display: flex;
   flex-direction: column;
+  /* justify-content: center; */
+  align-content: center;
 }
 
 .home-cta-1 {
@@ -241,6 +241,12 @@ p {
     align-content: center;
   }
 
+  li {
+    all: revert;
+    margin: 1.25rem 0 0 1.25rem;
+    display: flex;
+  }
+
   li a {
     margin-right: 1.25rem;
     text-decoration: none;
@@ -306,6 +312,7 @@ p {
   }
 
   .home-cta-1 {
+    all: revert;
     line-height: 39px;
     margin-bottom: 20px;
   }
@@ -400,7 +407,8 @@ p {
   }
 
   .services-card-img {
-    width: 24.75rem;
+    width: 80%;
+    /* width: 24.75rem; */
   }
 
   #c1 {
@@ -491,8 +499,10 @@ p {
   }
 
   .support-img {
-    height: 36.4375rem;
-    width: 54.6875rem;
+    /* height: 36.4375rem;
+    width: 54.6875rem; */
+    height: auto;
+    width: 100%;
     margin-top: 13.75rem;
     background: url("../images/7.jpeg") no-repeat center center/cover;
     grid-area: aside;

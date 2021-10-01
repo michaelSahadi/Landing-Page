@@ -19,18 +19,15 @@ for (let i = 0; i < sections.length; i++) {
 }
 
 const options = {
-  threshold: 0.7
+  threshold: 0.4
 };
 
 let observer = new IntersectionObserver(navCheck, options);
 
 function navCheck(entries) {
   entries.forEach(entry => {
-    // console.log(entry);
     const className = entry.target.className;
-    // console.log(className);
     const activeAnchor = document.querySelector(`[data-page=${className}]`);
-    console.log(activeAnchor);
     activeAnchor.style.color = "#ffffff";
 
     if (entry.isIntersecting) {

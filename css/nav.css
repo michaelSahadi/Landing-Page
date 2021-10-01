@@ -2,7 +2,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 7.5rem;
+  margin-bottom: 10%;
 }
 
 .cta-btn-nav {
@@ -10,10 +10,11 @@ nav {
 }
 
 .hamburger {
+  top: 40px;
   position: fixed;
   display: block;
   cursor: pointer;
-  margin: 20px 0 40px 20px;
+  margin: 20px 0 0px 20px;
 }
 
 .bar {
@@ -23,20 +24,22 @@ nav {
   margin: 5px auto;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background-color: #ffffff;
+  background-color: #016774;
 }
 
 .nav-menu {
   list-style: none;
   position: fixed;
+  top: 40px;
   left: -100%;
-  margin: 7.5rem 0;
+  /* margin: 7.5rem 0; */
   padding: 1rem 0;
   flex-direction: column;
+  height: 100%;
   width: 100%;
   box-shadow: 0 8px 32px 0 rgba(0 0 0 / 0.4);
   backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(15px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
@@ -46,11 +49,10 @@ nav {
 }
 
 li {
-  margin: 1.25rem 0 0 1.25rem;
-}
-
-li a:hover {
-  color: #016774;
+  margin-bottom: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 .nav-a {
