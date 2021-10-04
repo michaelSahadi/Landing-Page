@@ -20,7 +20,7 @@ for (let i = 0; i < sections.length; i++) {
   navMenu.appendChild(listElement);
 };
 
-// Went with this method because its less code on my end
+// Went with this method because its less code on my end. Plus, I just couldn't get it to work with vanilla JS
 const scroll = new SmoothScroll('#navigation a[href*="#"]', {
   speed: 1000
 });
