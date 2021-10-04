@@ -59,6 +59,10 @@ li {
   justify-content: center;
 }
 
+.active {
+  color: #016774;
+}
+
 .nav-a {
   font-weight: bold;
 }

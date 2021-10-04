@@ -17,6 +17,10 @@ body {
   height: 100vh;
 }
 
+section {
+  scroll-snap-align: center;
+}
+
 main {
   height: 100vh;
 }
@@ -32,7 +36,6 @@ h1 {
 
 p {
   line-height: 1.875rem;
-  /* margin-bottom: 1.25rem; */
 }
 
 .cta-img-holder {
@@ -47,7 +50,6 @@ p {
   padding: 0 10%;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-content: center;
 }
 
@@ -69,43 +71,11 @@ p {
   font-weight: bold;
   font-size: 1rem;
   border-radius: 100rem;
-
   box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
-  /* border: solid 3px transparent; */
   border-width: 3px;
   border-style: solid;
   border-image: linear-gradient(101deg, #3eacbd, #016774) 1;
-  /* background-image: linear-gradient(
-      rgba(255, 255, 255, 0),
-      rgba(255, 255, 255, 0)
-    ),
-    linear-gradient(101deg, #3eacbd, #016774); */
-  /* border-color: linear-gradient(101deg, #3eacbd, #016774); */
-  /* background-image: linear-gradient(transparent, transparent); */
-  /* background-origin: border-box;
-  background-clip: content-box, border-box; */
-  /* box-shadow: 2px 1000px 1px rgb(50, 50, 50, 100%) inset; */
-
-  /* border: 2px solid transparent;
-  /* border-right-color: #743ad5; */
-  /* border-color: linear-gradient(101deg, #3eacbd, #016774);
-   background: linear-gradient(
-        to left,
-        rgb(116, 58, 213) 0%,
-        rgb(186, 58, 143) 70%,
-        transparent 70%,
-        transparent 85%,
-        rgb(201, 58, 128) 85%,
-        rgb(213, 58, 157) 100%
-      )
-      top/100% 2px, 
-    linear-gradient(to left, #743ad5 0%, #d53a9d 100%) bottom/100% 2px;
-  background-repeat: no-repeat; */
 }
-
-/* .cta-btn:hover {
-  background: linear-gradient(to bottom, #3eacbd 0%, #016774 100%);
-} */
 
 #about {
   display: flex;
@@ -144,25 +114,20 @@ p {
   visibility: hidden;
 }
 
-/* #services {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-} */
-
 .services-card-img-wrapper {
   display: flex;
   justify-content: center;
 }
 
 .sevices-sub-card {
+  position: relative;
   margin-top: 1.25rem;
   margin-bottom: 5rem;
   font-size: 2rem;
   font-weight: 700;
   display: flex;
   justify-content: center;
+  z-index: 0;
 }
 .services-card-img {
   width: 19.0625rem;
@@ -170,7 +135,6 @@ p {
 }
 
 .services-card-holder {
-  /* margin: 0 40px 80px; */
   width: 305px;
   height: 66px;
   border-radius: 15px;
@@ -188,14 +152,6 @@ p {
   .hamburger {
     display: none;
   }
-
-  /* .sticky {
-    position: fixed;
-    
-    /* top: 40px; */
-  /* width: 100%; */
-  /* height: 194px; */
-  /* }  */
 
   header {
     display: flex;
@@ -263,39 +219,10 @@ p {
 
   .cta-img-holder {
     all: revert;
-    /* background: url("../images/splash.jpeg") no-repeat center center/cover; */
-    /* height: 100%; */
-    /* position: relative; */
-    /* Center and scale the image nicely */
-    /* background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -1; */
-    /* min-height: 100vh;
-    min-width: 100vw; */
-
-    /* Set up proportionate scaling */
-    /* width: 100%;
-    height: auto; */
-
-    /* Set up positioning */
-    /* position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1; */
-
-    /* min-width: 1024px; */
-    /* background-image: url("../images/splash.jpeg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; */
-    /* background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; */
   }
 
   .home-cta {
+    all: revert;
     height: 19.375rem;
     width: 68.0625rem;
     left: 0px;
@@ -355,10 +282,9 @@ p {
 
   .about-content {
     all: revert;
+    position: relative;
     height: 620px;
     width: 1010px;
-    /* ttop: -75vh; */
-    position: relative;
     padding: 40px;
     box-shadow: 0 8px 32px 0 rgba(0 0 0 / 0.4);
     backdrop-filter: blur(15px);
@@ -387,10 +313,6 @@ p {
     padding-left: 5px;
   }
 
-  .about-contact {
-    grid-area: contact;
-  }
-
   #services {
     all: revert;
     display: grid;
@@ -408,7 +330,6 @@ p {
 
   .services-card-img {
     width: 80%;
-    /* width: 24.75rem; */
   }
 
   #c1 {
@@ -454,7 +375,6 @@ p {
 
   #services-contact {
     grid-area: contact;
-    margin-top: -50%;
   }
 
   #experience {
@@ -468,16 +388,14 @@ p {
   }
 
   .experience-card {
-    height: 620px;
-    width: 1148px;
+    position: relative;
     left: 0px;
     top: 30%;
-    position: relative;
-    padding: 40px;
+    padding: 2.5rem 1.25rem;
     box-shadow: 0 8px 32px 0 rgba(0 0 0 / 0.4);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    border-radius: 0 25px 25px 0;
+    /* border-radius: 0 25px 25px 0; */
     border: 1px solid rgba(165, 165, 165, 0.2);
     border-left: 0;
     z-index: 2;
@@ -499,20 +417,26 @@ p {
   }
 
   .support-img {
-    /* height: 36.4375rem;
-    width: 54.6875rem; */
     height: auto;
     width: 100%;
-    margin-top: 13.75rem;
+    margin-top: 10rem;
     background: url("../images/7.jpeg") no-repeat center center/cover;
     grid-area: aside;
   }
 
   .about-content-1 {
-    margin: 13.75rem 5rem 0 0;
+    margin: 10rem 5rem 0 0;
     grid-area: text;
   }
 
+  .about-content-2 {
+    all: revert;
+  }
+
+  .about-content-1,
+  .about-content-2 {
+    margin-left: 1.25rem;
+  }
   #contact-btn {
     margin-left: 20px;
   }
