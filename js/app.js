@@ -21,9 +21,32 @@ for (let i = 0; i < sections.length; i++) {
 };
 
 // Went with this method because its less code on my end. Plus, I just couldn't get it to work with vanilla JS
-const scroll = new SmoothScroll('#navigation a[href*="#"]', {
-  speed: 1000
+// const scroll = new SmoothScroll('#navigation a[href*="#"]', {
+//   speed: 1000
+// });
+
+// Scroll behavior isn't supported on Safari
+const navLinks = document.querySelectorAll(".nav-menu a");
+
+navLinks.forEach((link) => {
+
+  link.addEventListener('click', (event) => {
+    event.preventDefault();  // prevent the page from reloading (a default behavior when a link is clicked)
+    const id = link.getAttribute("href");// get id from href value of the link, use link.getAttribute("href")
+
+    // get the reference to the corresponding section
+    const targetSection = document.querySelector(id);// use `.querySelector(id)` to select the corresponding section
+
+    // add smooth scrolling feature like this-
+    targetSection.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest",
+    });
+  })
+
 });
+
 
 // Setting how far the section has to come into view before the section nav highlights
 const options = {
